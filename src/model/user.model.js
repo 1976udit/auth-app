@@ -16,7 +16,7 @@ const userSchema = new Schema({
         required : [true , "Please enter your password"],
         unique : true
       },
-      isVerefied : {
+      isVerified : {
         type : Boolean,
         default : false
       },
@@ -31,4 +31,4 @@ const userSchema = new Schema({
 }
 , {timestamps:true})
 
-export const User = mongoose.models.users || mongoose.model("User",userSchema)
+export const User = mongoose.models.User || mongoose.model("User",userSchema)
